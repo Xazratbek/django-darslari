@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django darslar</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kun yangiliklari </h1>
+        <ul>
+            {% for post in object_list %}
+                <li><h2> {{ post.title }} </h2></li>
+                <p> {{ post.text }} <br></p>
+                {% comment %} <p>Avtor: {{ post.author }}</p> {% endcomment %}
+            {% endfor %}
+        </ul>
+    </header>
+</body>
+
+</html>
